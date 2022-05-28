@@ -1,0 +1,28 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: project-service
+          uri: lb://project-service
+          predicates:
+            - Path=/project/**
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employee/**
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
