@@ -2,9 +2,7 @@ package pl.altkom.springcloud.lab07.oauth2.cloudgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@EnableEurekaClient
 @SpringBootApplication
 public class CloudGatewayApplication {
 
