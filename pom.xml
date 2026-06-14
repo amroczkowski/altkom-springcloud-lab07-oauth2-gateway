@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pl.altkom.springcloud.lab07.oauth2.cloudgateway</groupId>
-	<artifactId>cloud-gateway</artifactId>
+	<artifactId>lab07-cloud-gateway</artifactId>
 	<version>1.0.0</version>
 	<name>cloud-gateway</name>
 	<description>Cloud Gateway</description>
