@@ -25,14 +25,18 @@ spring:
       client:
         provider:
           keycloak-provider:
-            issuer-uri: http://localhost:8081/auth/realms/app-realm
+            issuer-uri: http://localhost:8081/realms/app-realm
         registration:
           keycloak-gateway:
             provider: keycloak-provider
             client-id: gateway
-            client-secret: NRb1J7Xf2BtXXjvEiQ4jKHloXt2Zhfp4
+            client-secret: jb6aVX3p5Yz7Rn1riNdEnwYjFi6TrYZP
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak-gateway"
+            scope:
+              - openid
+              - profile
+              - email
 
 management:
   health:
